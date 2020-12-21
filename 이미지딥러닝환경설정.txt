@@ -1,0 +1,42 @@
+참조 https://reyrei.tistory.com/11?category=794577
+
+가상환경생성
+conda create -n MaskRCNN python=3.6 pip
+
+생성된 가상환경폴더에서 디렉터리 설치 후 위치
+(MaskRCNN) C:\Users\User\Anaconda3\envs\MaskRCNN\>
+mkdir deeplearning
+(MaskRCNN) C:\Users\User\Anaconda3\envs\MaskRCNN\deeplearning>
+
+
+필요 모듈 설치
+pip install tensorflow-gpu==1.5
+pip install keras
+pip install h5py==2.10.0
+pip install scikit-image==0.16.2
+pip install Pillow jupyter pandas
+pip install opencv-python ipython
+pip install Cython
+
+git으로 Mask_RCNN 다운
+conda install –c anaconda git
+git clone https://github.com/matterport/Mask_RCNN.git
+
+cd Mask_RCNN
+
+프로토콜다운
+Visual C++ 2017 Build Tools 없으면 설치 필요
+https://visualstudio.microsoft.com/ko/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15
+
+git clone https://github.com/philferriere/cocoapi.git 
+pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=pythonAPI
+
+imagaug 다운
+git clone https://github.com/aleju/imgaug.git
+pip install imgaug
+
+balloon dataset 다운
+https://github.com/matterport/Mask_RCNN/releases
+
+압축 풀고 여기에 dataset 폴더 만든 후 train, val 폴더 넣기
+C:\Users\User\Anaconda3\envs\MaskRCNN\deeplearning\Mask_RCNN\samples\balloon
